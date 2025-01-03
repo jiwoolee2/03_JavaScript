@@ -197,6 +197,4 @@ function typeCheck(){
     console.log(sumFn(11,7));
     console.log(sumFn(-33,234));
     
-
-
 }
