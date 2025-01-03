@@ -141,7 +141,7 @@ function increase(){
 
 /* 증감 연산자를 이용해 1씩 감소하는 함수 */
 function decrease(){
-        //1) countResult에 작성된 숫자 얻어오기
+        //1) id기 countResult인 span 태그에 작성된 숫자 얻어오기
         let count = Number(countResult.innerText);
         //2) 얻어온 숫자를 1 감소 시켜 출력하기
         countResult.innerText=--count;
