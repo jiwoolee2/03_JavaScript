@@ -54,6 +54,7 @@ function test(){
 function deposit(){
     balance += Number(amount.value);
     output.innerText = balance;
+    amount.value = "";
 }
 
 function withdrawal(){
@@ -76,6 +77,7 @@ function withdrawal(){
             남은 잔액 : ${balance}원`);
         }
         output.innerText = balance;
+        amount.value = "";
     }
 
 }
