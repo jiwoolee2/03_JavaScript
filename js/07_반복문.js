@@ -213,5 +213,266 @@ function check16(){
     }
     // p#result16에 출력
     document.getElementById("result16").innerHTML = result;
+}
+
+/** 다음 모양 출력하기 
+
+1234
+1234
+1234
+*/
+function check17(){
+    for(let row=1 ; row<=3 ; row++){
+        let result = '';
+        for(let col=1 ; col<=4 ; col++){
+            result+=col;
+        }
+    console.log(result);
+    console.log("----");     
+    } 
+}
+
+/** 다음 모양 출력하기 
+12345
+12345
+12345
+12345
+*/
+function check18(){
+    for(let row=1 ; row<=4 ; row++){
+        let result = '';
+        for(let col=1 ; col<=5 ; col++){
+            result+=col;
+        }
+        console.log(result);
+        console.log("----");  
+    }
+}
+
+/** 다음 모양 출력하기 
+654321
+654321
+654321
+654321
+*/
+function check19(){
+    for(let row=1 ; row<=3 ; row++){
+        let result = '';
+        for(let col=6 ; col>=1 ; col--){
+            result+=col;
+        }
+        console.log(result);
+        console.log("----");  
+    }
+}
+
+/** 다음 모양 출력하기 
+1
+12
+123
+1234
+12345
+*/
+function check20(){
+    for(let row=1 ; row<=5 ; row++){
+        let result = ''
+        for(let col=1 ; col<=row ; col++){
+            result += col;
+        }
+        console.log(result);
+    }
+}
+
+/** 다음 모양 출력하기 
+3
+34
+345
+3456
+34567
+*/
+function check21(){
+    for(let row=1 ; row<=5 ; row++){
+        let result = ''
+        for(let col=3 ; col<=row+2 ; col++){
+            result += col;
+        }
+        console.log(result);
+    }
+}
+
+/** 다음 모양 출력하기 
+*
+**
+***
+*/
+function check22(){
+    for(let row=1 ; row<=3 ; row++){
+        result='';
+        for(let col=1 ; col<=row ; col++){
+            result +='*'
+        }
+        console.log(result);
+    }
+}
+
+/** 입력 받은 숫자 만큼의 *모양 삼각형 출력하기 */
+function check23(){
+    const input = document.getElementById("input23");
+    if(input.value.length === 0){
+        alert("숫자를 입력해주세요");
+        return;
+    }
+    const val = Number(input.value);
+
+    // 입력된 숫자가 0 이하인 경우
+    if(val<0){
+        alert("0보다 큰 수를 입력하세요");
+        return;
+    }
+    for(let row =1 ; row<=val ; row++){
+        result='';
+        for(let col=1 ; col<=row ; col++){
+            result +='*'
+        }
+        console.log(result);   
+    }
+}
+
+/** 다음 모양 출력하기 
+****
+***
+**
+*
+*/
+function check24(){
+    for(let row=4 ; row>=1 ; row++){
+        let result='';
+        for(let col=1 ; col<=row ; col++){
+            result += '*';
+        }
+        console.log(result);
+        
+    }
+
+    for(let row=1 ; row<=4 ; row++){
+        let result=''
+        for(let col=1 ; col<=5-row ; col++){
+            result +='*'
+        }
+        console.log(result);
+        
+    }
+}
+
+/** 1부터 30사이의 정수 중 4의 배수는 몇개? */
+function check25(){
+    let result=0;
+    for(let num=1 ; num<=30 ; num++){
+        if(num%4===0){
+            result+=1
+        }
+    }
+    console.log(result); 
+}
+
+/** 1부터 100 사이의 정수 중 입력 받은 값의 배수는 몇개? */
+function check26(){
+    let count =0;
+    const input = Number(document.getElementById("input26").value);
+    for(let num=1 ; num<=100 ; num++){
+        if(num%input===0){
+            count += 1
+        }
+    }
+    console.log(`1에서 100사이 ${input}의 배수 : ${count}개`);
+}
+
+/** count를 이용해 숫자 부여하기 */
+function check27(){
+    let num = 0;
+    for(let row=1 ; row<=3 ; row++){
+        let result='';
+        for(let col=1 ; col<=4 ; col++){
+            result+=col+num+' ';
+        }
+        num+=4
+        console.log(result)
+    }
+
+    let count =1;
+    for(let row=1 ; row<=3 ; row++){
+        let str="";
+        for(let col=1 ; col<=4 ; col++){
+            /* str += `${count} `;
+            count++; */
+            str += `${count++} ` //후위 연산
+        }
+        console.log(str)  ;
+    }
+}
+
+/** prompt를 이용해서 입력 받은 모든 숫자 더하기 */
+/* 단, 취소 입력 시 추가 입력을 받지 않고
+누적된 합계를 alert로 출력 */
+function check28(){
+    // prompt("내용") : 입력이 포함된 알림창
+    // - 확인 클릭 : 입력한 내용 반환
+    // - 취소 클릭 : null 반환
+
+    let sum = 0; //합계를 누적할 변수
+    let val; //prompt에 입력될 값을 number 타입으로 변환 후 저장할 변수
+   
+    while((val = prompt("숫자를 입력(취소 클릭 시 종료)"))!==null){
+
+        sum+=Number(val);
+    }
+    console.log(sum);
+}
+
+/* 메뉴 주문하기 */
+function check29(){
+
+    //메뉴 가격을 상수로 선언
+    const gimbap = 3000;
+    const ramen = 4500;
+    const donkkaseu = 9000;
+
+    //메뉴별 주문 개수를 저장한 카운트 변수 선언
+    let gCount = 0;
+    let rCount = 0;
+    let dCount = 0;
+
+    //promnpt에 저장된 값을 저장할 변수 선언
+    let input; // undefined
+    //undefined와 null은 다름
+    while(input!==null){
+
+        input = prompt("메뉴 번호를 입력하세요(1.김밥 2.라면 3. 돈까스");
+        
+        switch(input){
+            case "1" : gCount++; break; //김밥 주문 개수 증가
+            case "2" : rCount++; break;
+            case "3" : dCount++; break;
+            case null : alert("주문이 완료되었습니다"); break;
+            default: alert("잘못 입력하셨습니다.")
+        }
+    }
+    //innerHTML사용
+    //주문된 메뉴만 출력(count변수에 저장된 값이 0초과)
+
+    let outputHtml = ''; //출력할 html 코드가 포함된 문자열 저장
+
+    if(gCount>0){//김밥을 주문한 경우
+        outputHtml += `<li>김밥(${gCount}개) : ${gimbap*gCount}원</li>`}
+    if(rCount>0){//라면을 주문한 경우
+        outputHtml += `<li>라면(${rCount}개) : ${ramen*rCount}원</li>`}
+    if(dCount>0){//돈까스을 주문한 경우
+        outputHtml += `<li>돈까스(${dCount}개) : ${donkkaseu*dCount}원</li>`}
+    
+        /* 합계 */
+    const sum = (gimbap*gCount)+(ramen*rCount)+(donkkaseu*dCount);
+    outputHtml+=`<li>합계 : ${sum}원</li>`
+
+    document.getElementById("result29").innerHTML = outputHtml
 
 }
