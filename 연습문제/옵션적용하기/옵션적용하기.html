@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옵션적용하기</title>
+    <link rel="stylesheet" href="옵션적용하기.css">
+</head>
+<body>
+    
+
+    <div id="setting">
+        <span id="width">
+            너비 : <input type="number" id="input1">px
+        </span>
+        <span id="height">
+            높이 : <input type="number" id="input2">px <br>
+        </span> 
+        <span id="size"> 
+            글자크기 : <input type="number" id="input3">px 
+        </span>
+        <span>
+            굵기 :
+            <span id="boldFace"> 
+                <label for="normal">보통</label>
+                <input type="radio" name="bf" id="normal"> 
+            </span>
+            <span id="boldFace"> 
+                <label for="bold">굵게</label>
+                <input type="radio" name="bf" id="bold"> 
+            </span>
+            <br>
+        </span>
+        <span id="fontColor">
+            글자색 : <input type="text" id="input4"> 
+        </span>
+        <span id="backgroundColor">
+            배경색 : <input type="text" id="input5"> <br>
+        </span>
+        <span id="justifyContent">
+            가로정렬 : 
+            <span> 
+                <label for="left">왼쪽</label>
+                <input type="radio" name="jc"id="left"> 
+            </span>
+            <span> 
+                <label for="center">가운데</label>
+                <input type="radio" name="jc" id="center"> 
+            </span>
+            <span> 
+                <label for="right">오른쪽</label>
+                <input type="radio" name="jc" id="right"> 
+            </span>
+            <br>
+        </span>
+        <span id="alignItems">
+            세로정렬 : 
+            <span> 
+                <label for="top">위</label>
+                <input type="radio" name="ai" id="top"> 
+            </span>
+            <span> 
+                <label for="center">가운데</label>
+                <input type="radio" name="ai" id="center"> 
+            </span>
+            <span> 
+                <label for="down">아래</label>
+                <input type="radio" name="ai" id="down"> 
+            </span>
+            <br>
+        </span>
+        <span id="outputString">
+        출력 문자열 : <input type="number" id="input6">
+        </span>
+    </div>
+    <button id="btn">적용하기</button>
+    <div class="box">여기에 입력</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="옵션적용하기.js"></script>
+</body>
+</html>

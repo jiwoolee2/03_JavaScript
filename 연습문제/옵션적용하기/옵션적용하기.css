@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 10px;
+}
+#setting{
+  
+   
+    font-weight: bold;
+
+}
+div.box{
+    border: 5px solid black;
+}
