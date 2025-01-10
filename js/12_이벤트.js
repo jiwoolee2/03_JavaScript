@@ -89,7 +89,7 @@ test1.addEventListener("click",function(){
     console.log("현재 투명도 :", current);
     // 처음엔 ""(빈캄)
 
-    if(current === ""){
+    if(current === ""){ 
         current = 1; //불투명
     }
 
