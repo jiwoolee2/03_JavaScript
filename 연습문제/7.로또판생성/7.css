@@ -1,0 +1,28 @@
+.hidden{
+    display: none !important
+}
+
+#box{ /* 박스 설정*/     
+    border: 1px solid black;
+    width: 280px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap; /* 내부 요소들을 한줄이 아니라 여러줄로 배치 */
+    justify-content: space-around; /* 일정한 간격 유지(끝부분제외) */
+}
+
+#box > div {  /* 박스 안에 있는 숫자 */
+   border: 1px solid black;
+   border-radius: 50%; 
+   width: 33px;
+   height: 33px;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.pink{
+    background-color: pink;
+}
