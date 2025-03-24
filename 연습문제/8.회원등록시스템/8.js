@@ -51,9 +51,6 @@ allChecked.addEventListener("change", ()=>{
       item.checked=allChecked.checked;});
 });
 
-
-
-
 /* 선택 삭제하기 */
 del.addEventListener("click",()=>{
   const trs = document.querySelectorAll(".row");
@@ -63,6 +60,5 @@ del.addEventListener("click",()=>{
       tr.remove()
     }
   }
-
 })  
 
